@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import { MenuRouter }  from './__components/MenuRouter';
+import Timer  from './__components/Timer';
 
 
 const App = () => 
     <div className="app">
-        <MenuRouter />
+        <Timer />
     </div>
 
 export default App;
