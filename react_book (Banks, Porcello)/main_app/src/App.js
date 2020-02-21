@@ -1,12 +1,17 @@
 import React from 'react';
 import './App.css';
 
-import Timer  from './__components/Timer';
+import { Provider } from 'react-redux';
+import store from './Redux/simple/store'
+
+import TopPanel  from './__components/TopPanel';
 
 
-const App = () => 
-    <div className="app">
-        <Timer />
-    </div>
+const App = () =>
+    <Provider store={store}>
+        <div className="app">
+            <TopPanel />
+        </div>
+    </Provider>
 
 export default App;
