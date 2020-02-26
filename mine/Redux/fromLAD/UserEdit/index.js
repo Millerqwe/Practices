@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import { setName } from '../../store/actionCreators';
+import { setName } from '../../Redux/simple/actions';
 
 
 const UserEdit = (props) => {
@@ -12,9 +12,10 @@ const UserEdit = (props) => {
     return (       
         <div>           
             <p>
-                Name: <input type="text" value={props.name}  onChange={setName}/></p>           
+                Name: <input type="text" value={props.name}  onChange={setName}></input>
+            </p>           
             <p>
-                Age: <input type="text" value={props.age} />
+                Age: <input type="text" value={props.age}></input>
             </p>       
         </div>   
     )
