@@ -33,4 +33,4 @@ rules:
   no-console: 0
 # globals:    
 #   __filename: true    
-#   __dirname: true
+#   __dirname: truenp
