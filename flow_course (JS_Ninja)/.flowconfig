@@ -1,0 +1,11 @@
+[ignore]
+    <PROJECT_ROOT>/node_modules/__test__/.*
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]
