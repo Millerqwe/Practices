@@ -1,5 +1,5 @@
 // import { ACTIONS } from '../actions/actions'
-import { author } from '../../helper/testData';
+import {author} from '../../helper/testData';
 
 
 const initialState = {

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { connect } from 'react-redux';
 
 import { Content } from '../layouts/Content';
-import { ChatContext } from '../../context'
+import { ChatContext } from '../../context';
 
 
 const ContentContainer = ({ chats }) => {
@@ -15,7 +15,7 @@ const ContentContainer = ({ chats }) => {
 }
 
 const mapStateToProps = (store) => ({
-    chats: store.chats
+    chats: store.chats.list
 });
 
 

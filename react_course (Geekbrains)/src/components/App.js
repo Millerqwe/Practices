@@ -1,6 +1,6 @@
 'use strict';
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
@@ -15,11 +15,17 @@ import '../static/style.css';
 import { initStore, history } from '../store';
 import { ChatContext, MessageContext } from '../context'
 
-import { addNewMessage } from '../store/actions/actionCreators';
+import { addNewMessage, chatsLoad } from 'actions/actionCreators';
 
 
 export const App = () => {
     const {store, persistor} = initStore();
+
+    useEffect(() => {
+        if (Object.keys(store.getState().chats.list).length === 0) {
+            store.dispatch(chatsLoad());
+        }
+    })
 
     let author = store.getState().author.name; //hard data
 

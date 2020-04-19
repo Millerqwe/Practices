@@ -18,7 +18,7 @@ const ChatListContainer = ({ chats, addNewChat, directToChat }) => {
     
 
 const mapStateToProps = (store) => ({
-    chats: store.chats
+    chats: store.chats.list
 });
 const mapDispatchToProps = (dispatch) => ({
     addNewChat: (chatID, newChatName) => dispatch(addNewChat(chatID, newChatName)),

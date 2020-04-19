@@ -14,7 +14,7 @@ export const ChatList = ({ chats, onAddNewChat }) =>
                     <ListItem key={id}>
                         <Link to={`/chat/${id}`} className="chat__link text--size--item">
                             <Button fullWidth={true}>                                
-                                {chat.name}
+                                {chat.name || "???"} 
                             </Button>
                         </Link>
                     </ListItem>

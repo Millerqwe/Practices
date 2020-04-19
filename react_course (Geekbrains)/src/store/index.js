@@ -4,6 +4,7 @@ import { createBrowserHistory } from 'history';
 import { routerMiddleware } from 'connected-react-router';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import thunk from 'redux-thunk';
 
 import { reducers } from './reducers';
 import { autoAnswerMiddleware } from 'middlewares/answerBot';
@@ -13,7 +14,8 @@ export const history = createBrowserHistory();
 
 const persistConf = {
     key: 'root',
-    storage
+    storage, 
+    blackList: ['chats']
 };
 
 export function initStore() {
@@ -23,7 +25,7 @@ export function initStore() {
         persistReducer(persistConf, reducers(history)),
         initialStore,
         compose(
-            applyMiddleware(logger, autoAnswerMiddleware, routerMiddleware(history)),
+            applyMiddleware(logger, thunk, autoAnswerMiddleware, routerMiddleware(history)),
             window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
         )
     );
