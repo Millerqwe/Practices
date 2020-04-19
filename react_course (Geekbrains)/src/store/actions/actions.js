@@ -1,0 +1,4 @@
+export const ACTIONS = {
+    ADD_NEW_CHAT: 'ADD_NEW_CHAT',
+    ADD_NEW_MESSAGE: 'ADD_NEW_MESSAGE',
+}
