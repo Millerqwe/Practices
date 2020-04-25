@@ -5,9 +5,6 @@ env:
 extends:
   - 'eslint:recommended'
   - 'plugin:react/recommended'
-globals:
-  Atomics: readonly
-  SharedArrayBuffer: readonly
 parserOptions:
   ecmaFeatures:
     experimentalObjectRestSpread: true
@@ -24,13 +21,15 @@ rules:
   quotes:    
     - error    
     - single  
-  # semi:    
-  #   - error    
-  #   - never  
-  # linebreak-style:    
-  #   - error    
-  #   - unix  
+  semi:    
+    - error    
+    - never  
+  linebreak-style:    
+    - error    
+    - unix  
   no-console: 0
-# globals:    
-#   __filename: true    
-#   __dirname: truenp
+globals:    
+  __filename: true    
+  __dirname: true
+  Atomics: readonly
+  SharedArrayBuffer: readonly
