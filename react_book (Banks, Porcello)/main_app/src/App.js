@@ -1,9 +1,11 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { createStore, combineReducers } from 'redux';
+
+import {color, colors} from './store/reducers';
 import './App.css';
 
-import { createStore, combineReducers } from 'redux';
-import { Provider } from 'react-redux';
-import {color, colors} from './__store/reducers';
+
 
 const App = () => {
     let store = createStore(

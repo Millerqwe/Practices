@@ -3,6 +3,7 @@ export const color = (state = {}, action) => {
         case 'ADD_COLOR':
             return {
                 color: action.color,
+                title: action.title || 'unnamed',
                 timestamp: action.timestamp
             }
         default: return state;
