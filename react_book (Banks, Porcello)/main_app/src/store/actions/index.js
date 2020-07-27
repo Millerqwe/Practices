@@ -3,7 +3,7 @@ export const actions = {
 }
 
 
-export const addColor = (color) => ({
+export const addColor = color => ({
     type: actions.ADD_COLOR,
     color,
     timestamp: Date.now()

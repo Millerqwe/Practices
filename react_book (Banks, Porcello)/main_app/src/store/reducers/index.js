@@ -5,7 +5,7 @@ export const color = (state = {}, action) => {
                 color: action.color,
                 title: action.title || 'unnamed',
                 timestamp: action.timestamp
-            }
+            };
         default: return state;
     }
 }
@@ -15,8 +15,14 @@ export const colors = (state = [], action) => {
         case 'ADD_COLOR':
             return [
                 ...state,
-                color(action)
-            ]
+                {   
+                    id: '12345',
+                    color: action.color,
+                    title: action.title || 'unnamed',
+                    timestamp: action.timestamp
+                }
+            ];
+        default: return state;
     }
 }
 

@@ -5,8 +5,6 @@ import { createStore, combineReducers } from 'redux';
 import {color, colors} from './store/reducers';
 import './App.css';
 
-
-
 const App = () => {
     let store = createStore(
         combineReducers(
