@@ -40,5 +40,12 @@
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.3",
     "jest": "^26.0.0"
+  },
+  "jest": {
+    "setupFiles": ["./__tests__/global.js"],
+    "modulePathIgnorePatterns": ["global.js"],
+    "moduleNameMapper": {
+      "\\.(scss)$": "<rootDir>/node_modules/jest-css-modules"
+    }
   }
 }
